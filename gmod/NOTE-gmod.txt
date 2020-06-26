@@ -1,0 +1,28 @@
+Create website and host on github
+Info about installing gmod stuff and custom addons
+
+-----
+
+There's a config file (not related to the addon) that gets the final decision on those values and changes them after they are initially created in the file that we were looking at
+C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\cfg\config.cfg
+
+Search ttt_traitor_pct in that file (line 233) and change that value (it rounds up) and any other values in the ttt section (ttt_detective_pct) if you'd like.
+
+Note that the actual number of traitors = ceil(totalNumPlayers * percent) where the ceiling function is just a round-up function. For example, the default is 0.34. For 3 players: 
+ceil(3 * 0.34) = ceil(1.02) = 2
+
+-----
+
+A value in the range 0.17-0.20 would mean 1 traitor for 1-5 players and 2 traitors for 6 players
+Also realized that ttt_detective_pct doesn't make a difference if ttt_detective_max = 1. It just depends on ttt_detective_min_players
+
+-----
+
+To update the custom_roles addon config...
+You need to use the gmad extractor found at 
+C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin\gmad.exe
+
+Drag this file 
+C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\custom_roles_for_ttt_1215502383.gma
+ on top of the gmad.exe file name. You now have a custom_roles... folder in your addons directory. Replace the init.lua folder at 
+C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\custom_roles_for_ttt_1215502383\gamemodes\terrortown\gamemode\init.lua
