@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garry's Mod</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <h1><i class="fab fa-steam header-icon"></i>Garry's Mod Setup Instructions</h1>
+
+    <div class="section">
+      <h5>To Play</h5>
+      <ol>
+        <li>Download the <a href="http://www.mediafire.com/download/xk1z42x56vndo27/CSS.zip">Counter-Strike: Source Textures</a></li>
+        <ul>
+          <li>Unzip the folder and drop it into <em>addons</em>: <code>C:\Program Files (x86)\Steam\SteamApps\common\GarrysMod\garrysmod\addons</code></li>
+        </ul>
+        <li>Login and Subscribe to the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2136481364">EPMR collection on Steam</a> (you must be friends with <a href="https://steamcommunity.com/id/liquidmotion/">LiquidMotion</a>)</li>
+      </ol>
+      <br>
+    </div>
+
+    <div class="section">
+    <h5>To Also Host</h5>
+      <ol>
+        <h6>Extract the gma file</h6>
+        <li>Navigate to <code>C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\bin</code> and find <code>gmad.exe</code></li>
+        <li>In another window, navigate to <code>C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons</code>.</li>
+        <ul>
+          <li>Drag <code>custom_roles_for_ttt_1215502383.gma</code> on top of the gmad.exe file name.</li>
+          <li>This will create a <code>custom_roles_for_ttt_1215502383</code> folder that is also inside of your addons folder.</li>
+        </ul>
+        <br>
+        <h6>Use the right configuration</h6>
+        <li>Now download <a href="docs/init.lua" download>init.lua</a> and <a href="docs/config.cfg" download>config.cfg</a> (right click > save link as)</li>
+        <ul>
+          <li>Replace the init.lua file at <code>C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\custom_roles_for_ttt_1215502383\gamemodes\terrortown\gamemode</code></li>
+          <li>Replace the config.cfg file at <code>C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\cfg</code></li>
+        </ul>
+      </ol>
+    </div>
+
+  </div>
+
+  <script src="https://kit.fontawesome.com/2bf4634c2d.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
