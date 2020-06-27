@@ -1,0 +1,99 @@
+/* Palette: https://colorhunt.co/palette/179372 */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #222831;
+  color: #ececec;
+}
+
+p {
+  color: #BABABA;
+  font-size: 1rem;
+}
+
+a {
+  color: #c1a57b;
+}
+
+a:hover {
+  color: #8F7A5B;
+}
+
+.container-fluid {
+  padding: 4% 15%;
+}
+
+/* Title Section */
+
+#title {
+  text-align: center;
+}
+
+/* #title .container-fluid {
+  padding: 3% 15% 7%;
+} */
+
+.portrait {
+  margin: 2% 0 3%;
+}
+
+.title-heading {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+/* Skills Section */
+
+.skill-btn {
+  color: #c1a57b;
+}
+
+.skill {
+  display: none;
+}
+
+.skill-heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.project {
+  margin-top: 3%;
+}
+
+.project-icon {
+  display: block;
+  margin: 1rem 0;
+}
+
+.project-heading {
+  font-size: 1.5rem
+}
+
+/* Footer Section */
+
+#footer {
+  text-align: center;
+}
+
+#footer .container-fluid {
+  padding: 3% 15% 3%;
+  background-color: #343a40;
+}
+
+.footer-icon {
+  margin: 20px 10px;
+}
+
+.copyright {
+  color: #777777;
+}
+
+/* @media (max-width: 990px) {
+  html {
+    font-size: 175%;
+  }
+} */
