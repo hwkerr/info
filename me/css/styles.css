@@ -47,6 +47,10 @@ a:hover {
   font-weight: 900;
 }
 
+#buttons {
+  text-align: center;
+}
+
 /* Skills Section */
 
 #skills {
