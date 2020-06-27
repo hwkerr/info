@@ -6,7 +6,7 @@ $("#no-selection").show();
 //   $(".skill").slideUp();
 // }
 
-$(".skill-btn").click(showSkill);
+$(".skill-link").click(showSkill);
 
 function showSkill(event) {
   let sectionID = $(this).attr("data-section");

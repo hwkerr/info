@@ -1,12 +1,14 @@
 /* Palette: https://colorhunt.co/palette/179372 */
 
 html {
+  background-color: #343a40;
   font-size: 100%;
 }
 
 body {
   background-color: #222831;
   color: #ececec;
+  text-align: center;
 }
 
 p {
@@ -23,7 +25,7 @@ a:hover {
 }
 
 .container-fluid {
-  padding: 4% 15%;
+  padding: 0 15% 7%;
 }
 
 /* Title Section */
@@ -32,9 +34,9 @@ a:hover {
   text-align: center;
 }
 
-/* #title .container-fluid {
-  padding: 3% 15% 7%;
-} */
+#title .container-fluid {
+  padding: 3% 15%;
+}
 
 .portrait {
   margin: 2% 0 3%;
@@ -47,8 +49,12 @@ a:hover {
 
 /* Skills Section */
 
-.skill-btn {
-  color: #c1a57b;
+#skills {
+  text-align: left;
+}
+
+.skill-icon {
+  width: 20%;
 }
 
 .skill {
