@@ -2,6 +2,6 @@
 
 Documents with instructions/notes for myself and others.
 
-[Personal Portfolio and Resume](hwkerr.github.io/info/me)
+[Personal Portfolio and Resume](me)
 
-[Garry's Mod Asset Installation](hwkerr.github.io/info/gmod)
+[Garry's Mod Asset Installation](gmod)
