@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wii</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <h1><i class="fa-solid fa-game-console-handheld"></i>How to Mod a Wii to Play Gamecube and Wii Games From a USB (or SD) Storage Device</h1>
+
+    <div class="section" id="homebrew">
+      <h5>Softmod your Wii (Homebrew Channel)</h5>
+	  <p>Requirements</p>
+	  <ul>
+		<li>SD Card (<a href="http://www.wiibrew.org/wiki/SD/SDHC_Card_Compatibility_Tests">Compatibility</a>)</li>
+	  </ul>
+	  <br/>
+      <ol>
+        <li>Make sure you are on system menu 4.3 and update if you are not</li>
+        <li>Find the MAC address of your Wii (instructions to do this can be found <a href="http://www.nintendo.com/consumer/systems/wii/en_na/includes/rvl-ht-int-find-mac-address.jsp">here</a>)</li>
+		<li>Go to please.hackmii.com and enter your system menu information and MAC address
+		<ul>
+			<li>U for NTSC-U, J for NTSC-J, E for PAL, and K for Korean</li>
+		</ul>
+		<li>Press "Cut the red wire"</li>
+		<li>Unzip the downloaded file onto a clean SD card</li>
+		<li>Remove all Gamecube Controllers and Memory Cards from your Wii</li>
+		<li>Put the SD card into your Wii</li>
+		<li>Go into the messages section of your Wii and look for the red letter</li>
+		<ul>
+			<li>scroll around as it may be a few days forward or back from the current day</li>
+		</ul>
+		<li>Open the letter and wait as some text appears. Press 1 when prompted</li>
+		<li>When the installation menu appears, select the option to install homebrew channel and continue</li>
+		<ul>
+			<li>exit the installer after it is complete</li>
+		</ul>
+		<li>You should now have the Homebrew Channel on your Wii</li>
+		<ul>
+			<li>you can rearrange channels on your Wii by picking them up with A+B</li>
+			<li>you still need to add apps in order for the Homebrew Channel to be useful</li>
+		</ul>
+      </ol>
+      <br>
+	  <p>Next: Add Apps to the Homebrew Channel</p>
+	  <ul>
+		<li><a href="#gcn">Use Nintendont to play Gamecube ROMs</a></li>
+		<li><a href="#wii">Use Cfg USB Loader to play Wii ROMs</a></li>
+	  </ul>
+    </div>
+	
+	<hr/>
+	
+	<div class="section" id="nintendont">
+      <h5>Install Nintendont</h5>
+	  <p>Requirements</p>
+	  <ul>
+		<li><a href="#homebrew">Homebrew Channel</a></li>
+		<li>HDD (USB or SD)</li>
+	  </ul>
+	  <br/>
+      <ol>
+        <li>Download the latest version of <a href="https://gbatemp.net/threads/nintendont.349258/">Nintendont</a></li>
+		<li>Download this <a href="https://github.com/FIX94/Nintendont/raw/master/nintendont/meta.xml" download>meta.xml</a></li>
+		<li>On the root of your HDD, create a folder called <em>apps</em></li>
+		<li>Inside the <em>apps</em> folder, create another folder called <em>Nintendont</em></li>
+		<li>Place both files into the Nintendont folder</li>
+		<li>Rename the <em>loader.dol</em> file to <em>boot.dol</em></li>
+		<li>Nintendont is ready to be used as soon as you add some gamecube games</li>
+		<ul>
+			<li>Access Nintendont through the Homebrew Channel</li>
+			<li>You can find a list of supported controllers <a href="https://gbatemp.net/threads/nintendont.349258/#Controllers">here</a></li>
+		</ul>
+      </ol>
+      <br>
+	  <p><a href="#gcn">Next: Add Gamecube Games to Nintendont</a></p>
+    </div>
+	
+	<div class="section" id="gcn">
+      <h5>Add Gamecube ROMs to Nintendont</h5>
+	  <p>Requirements</p>
+	  <ul>
+		<li><a href="#nintendont">Nintendont</a></li>
+		<li>HDD (USB or SD)</li>
+		<li>Gamecube ISO</li>
+	  </ul>
+	  <br/>
+      <ol>
+        <li>Download <a href="https://gbatemp.net/threads/nintendont.349258/">DiscEx</a> and extract the contents to a local folder</li>
+		<li>Obtain an ISO file</li>
+		<li>Drag the gamecube ISO on top of the DiscEx.exe file and a command prompt window should pop up and start to work</li>
+		<li>After DiscEx is done with the ISO, you shuld have a new folder in the same directory as the ISO</li>
+		<ul>
+			<li>folder name should be something along the lines of <em>ABCD01</em></li>
+			<li>contents should include <em>game.iso</em> and may include another folder named <em>sys</em></li>
+		</ul>
+		<li>Create a folder on your HDD called <em>games</em> and place the <em>ABCD01</em> folder into <em>games</em></li>
+		<ul>
+			<li>the file path should now look like <em>HDD:/games/ABCD01/...</em></li>
+		</ul>
+		<li>You can now play your Gamecube game through Nintendont</li>
+      </ol>
+    </div>
+	
+	<hr/>
+	
+	<div class="section" id="usbloader">
+      <h5>Install Cfg USB Loader</h5>
+	  <p>Requirements</p>
+	  <ul>
+		<li><a href="#homebrew">Homebrew Channel</a></li>
+		<li>HDD (USB or SD)</li>
+		<li><a href="#d2x">d2x</a></li>
+	  </ul>
+	  <br/>
+      <ol>
+        <li>Format your hard drive in one of the following four ways</li>
+		<ul>
+			<li><strong>FAT32 (recommended):</strong> most compatible; <a href="http://www.ridgecrop.demon.co.uk/guiformat.exe">this tool</a> can format your drive for you</li>
+			<li>WBFS: incompatible with GCN games; supports drives with a sector size of 4k (very rare)</li>
+			<li>NTFS: incompatible with GCN games; useful if you want to use the same drive to play games in Dolphin</li>
+			<li>EXT: incompatible with GCN games; read-only; same benefits at NTFS</li>
+		</ul>
+		<li>Download Cfg USB Loader v70 or later from <a href="http://gbatemp.net/index.php?showtopic=147638">here</a></li>
+		<ul>
+			<li><a href="https://code.google.com/archive/p/cfg-loader/downloads">Original Loader</a></li>
+			<li><a href="https://code.google.com/archive/p/cfg-loader-mod/downloads">Community improvement mods</a></li>
+			<li>If the latest version is a dol file, also download the most recent zip</li>
+		</ul>
+		<li>After preparing your hard drive, unzip the Configurable USB Loader .zip file and copy the contents of Cfg_USB_Loader##/inSDRoot to sd:/ where ## is the version number.</li>
+		<ul>
+			<li>You may be asked if you want to merge the directories. Answer yes.</li>
+			<li>After this step, you should have a folder called sd:/usb-loader which contains some files and subdirectories and another folder called sd:/apps/USBLoader that contains boot.dol and some other files.</li>
+			<li>On a Mac, you might need to copy the contents of the directories separately. You want to merge the apps folder in the .zip with the one on your SD card, not replace it.</li>
+		</ul>
+		<li>If you downloaded a .dol file as well (the mod version if you downloaded both types), rename the file to boot.dol and replace sd:/apps/USBLoader/boot.dol with the renamed file.</li>
+		<li>Edit meta.xml to use your chosen IOS using one of the following methods</li>
+		<ul>
+			<li>Method 1: Download a pre-configured meta.xml for IOS248</li>
+			<ol>
+				<li>Download the pre-configured <a href="http://gwht.wdfiles.com/local--files/usb-loader/meta.xml" download>meta.xml</a></li>
+				<li>Replace <em>sd:/apps/USBLoader/meta.xml</em> with the downloaded one.</li>
+			</ol>
+			<li>Method 2: Use the configurator (Windows)</li>
+			<ol>
+				<li>To start the Configurator, execute the CfgLoaderConfigurator app which will be located in sd:/usb-loader if you followed the above instructions.</li>
+				<ul>
+					<li>Alternatively, extract the usb-loader directory in the zip file to your hard drive to get a copy of the Configurator.</li>
+				</ul>
+				<li>Select the Global Options 3 tab.</li>
+				<li>Select either 248 or 224-mload from the ios drop-down box depending on your preferred choice of IOS (248 is recommended).</li>
+				<li>Ensure the check box to the left of the ios box is now checked (it should have done so when you selected the ios option).</li>
+				<li>Select the Meta Arguments tab.</li>
+				<li>Click the Global Options 3 check box to make it checked</li>
+				<li>Click the <em>Read meta.xml</em> button and select <em>sd:/apps/USBLoader/meta.xml</em>, then push OK.</li>
+				<li>Click the <em>Write meta.xml</em> button and push OK to replace the existing file with the one with a new included option.</li>
+			</ol>
+			<li>Method 3: Manual method</li>
+			<ol>
+				<li>Open <em>sd:/apps/USBLoader/meta.xml</em> in your favourite text editor</li>
+				<li>Find the line <em>&#60;/app&#62;</em> towards the end of the file.</li>
+				<li>Depending on which ios you want to use as default (248 is recommended) add one of the lines below before <em>&#60;/app&#62;</em></li>
+				<ul>
+					<li>&#60;arguments&#62;&#60;arg&#62;ios=248&#60;/arg&#62;&#60;/arguments&#62;</li>
+					<li>&#60;arguments&#62;&#60;arg&#62;ios=224-mload&#60;/arg&#62;&#60;/arguments&#62;</li>
+				</ul>
+				<li>Save your changes to meta.xml.</li>
+				<li>Configurable USB Loader is now ready to be used. Check the information below to see how to use it.</li>
+			</ol>
+		</ul>
+		<li>Start the Homebrew Channel and run Configurable USB Loader.</li>
+		<li>If you get an "IOS249 is a stub" message, redo the meta.xml steps, perhaps choosing a different method.</li>
+		<li>You may be asked to select device and partition</li>
+		<ol>
+			<li>Select your device as either SD (if you don't have a drive) or USB if you do</li>
+			<li>Select your partition from the list that you want to use</li>
+			<li>Select other options and ensure IOS is set to 247, 248 or 224, depending on what you chose in meta.xml</li>
+			<li>Confirm the screen to start the loader</li>
+			<li>Once you are at the GUI, point at the bottom part of the screen to bring up the menu bar and select Settings</li>
+			<li>Select System in the next dialog</li>
+			<li>Select Save Settings to save your choice of device and partition.</li>
+			<li>Push B to return to the GUI and start enjoying Configurable USB Loader</li>
+		</ol>
+      </ol>
+	  <br/>
+	  <p>Using the loader</p>
+	  <ul>
+		<li>Your drive MUST be connected in the USB slot closer to the outside edge of the Wii</li>
+		<li>The GUI has menu options that will appear if you select a game or point at the top or bottom of the screen.</li>
+		<li>Push D-Pad Down to change the display mode of covers. Once you find your favourite one, save settings via Settings…System…Save Settings and it will be default at startup.</li>
+		<li>Push the + button to install a game from your Wii's Disc Drive to the USB drive.</li>
+		<li>Push the - button to access a menu that lets you delete games from the drive or run discs.</li>
+		<li>Use A to play or 1 to enter the options menu of an installed game</li>
+		<li>In the GUI, you can change options after pushing A</li>
+		<li>You can download covers for all your installed games at once in the options menu.</li>
+		<li>Select the download all covers option and push D-pad right.</li>
+		<li>Read README-CFG.txt in the zip file to see how to configure Configurable USB Loader to suit your needs or go to the Configurable Options page for simpler instructions.</li>
+		<li>As stated in the installation instructions, the /usb-loader folder can be present on either the SD card or the USB drive (as long as the drive is formatted as FAT32 or NTFS). It will work faster on the USB drive, so it is suggested you move the folder to there if it works on your drive.</li>
+	  </ul>
+    </div>
+	
+	<div class="section" id="wii">
+      <h5>Add Wii ROMs to Cfg USB Loader</h5>
+	  <p>Requirements</p>
+	  <ul>
+		<li><a href="#homebrew">Homebrew Channel</a></li>
+		<li>HDD (USB or SD)</li>
+		<li><a href="#ios236">IOS236</a></li>
+		<li><a href="#d2x">d2x</a></li>
+		<li><a href="usbloader">Configurable USB Loader</a></li>
+	  </ul>
+	  <br/>
+      <ol>
+        <li>Download Wii Backup Manager Build 78 or newer from <a href="http://wii-homebrew.com/jdownloads/nintendo-wii-downloads/pc-tools/wii-backup-manager/download">here</a></li>
+		<li>Obtain an ISO file for a Wii game that you want to play through Cfg USB Loader</li>
+		<ul>
+			<li>If you obtain an nkit file, it should be converted to ISO format using <a href="https://gbatemp.net/download/nkit.36157/">nkit</a></li>
+		</ul>
+		<li>Run the Wii Backup Manager executable file that is applicable to your computer's operating sytem (x64 or x32)</li>
+		<li>Navigate to the Files tab, select Add, and choose all ISO files that you want</li>
+		<li>If you want, select covers to sync and download all covers for your ISOs</li>
+		<li>Navigate to the Drive 1 tab and use the dropdown menu to select a folder where you will keep your Wii games on your PC</li>
+		<li>Return to the Files tab, select all of your games, and select Transfer>Drive 1</li>
+		<li>After this is complete, you should have a folder with Game files and one disc.info file</li>
+		<ul>
+			<li>There will be a folder for each of your games titled something like "GAME NAME [ABCD01]"</li>
+		</ul>
+		<li>Create a folder on the root of your HDD called "wbfs"</li>
+		<li>Drag all of these files from your custom folder location to the new wbfs folder on your HDD</li>
+      </ol>
+    </div>
+	
+	<div class="section" id="ios236">
+      <h5>Install IOS236</h5>
+	  <p>Requirements</p>
+	  <ul>
+		<li><a href="#homebrew">Homebrew Channel</a></li>
+		<li>HDD (USB or SD)</li>
+		<li><a href="#nus">NUS Downloader</a> (if your Wii is not connected to the internet)</li>
+	  </ul>
+	  <br/>
+      <ol>
+        <li>Download IOS236 Installer v6 from <a href="http://uploadmirrors.com/download/0QEHVGAG/IOS236_Installer_v6.zip">here</a></li>
+		<li>If your Wii is not connected to the internet</li>
+		<ul>
+			<li>Use NUS Downloader to download IOS36 v3351 with Title ID 0000000100000024 with the Pack WAD option switched on to get IOS36-64-v3351.wad</li>
+			<li>Copy IOS36-64-v3351.wad to HDD:/</li>
+		</ul>
+		<li>Remove all memory cards from your Wii</li>
+		<li>Unzip the IOS236 Installer zip file and copy the IOS236 directory and its contents to <em>sd:/apps</em></li>
+		<ul>
+			<li>the file path should now look like <em>HDD:/apps/IOS236/...</em></li>
+		</ul>
+		<li>Start the Homebrew Channel on your Wii and run the IOS236 Installer</li>
+		<li>Read the startup messages then press 1 when prompted</li>
+		<li>If your Wii is connected to the Internet, choose "Download IOS from NUS" with the D-pad, otherwise choose "Load IOS from sd card"</li>
+		<li>Confirm your choice with the A button</li>
+		<li>When prompted, push A to continue the installation</li>
+		<li>Read about what Step 2 entails and push the appropriate button</li>
+		<ul>
+			<li>Push the button that corresponds to the way you will be playing your games, then read all information carefully and follow any further instructions.</li>
+		</ul>
+		<li>When complete, push any button to exit</li>
+      </ol>
+    </div>
+	
+	<div class="section" id="d2x">
+      <h5>d2x IOS for use with a USB Loader</h5>
+	  <p>Requirements</p>
+	  <ul>
+		<li><a href="#homebrew">Homebrew Channel</a></li>
+		<li>HDD (USB or SD)</li>
+		<li><a href="#nus">NUS Downloader</a> (if your Wii is not connected to the internet)</li>
+		<li><a href="#ios236">IOS236</a></li>
+	  </ul>
+	  <br/>
+      <ol>
+        <li>Download d2x cIOS Installer v2.2 or higher (but not v3.0) from <a href="http://code.google.com/p/d2x-cios-installer/downloads/list">here</a></li>
+		<li>If your Wii is not connected to the internet, use NUS Downloader to download the following files</li>
+		<ul>
+			<li>Download IOS56 v5661 with Title ID 0000000100000038 with the Pack WAD option switched on to get IOS56-64-v5661.wad</li>
+			<li>Download IOS57 v5918 with Title ID 0000000100000039 with the Pack WAD option switched on to get IOS57-64-v5918.wad</li>
+			<li>Copy IOS56-64-v5661.wad and IOS57-64-v5918.wad to HDD:/</li>
+		</ul>
+		<li>Unrar the rar file and copy the contents (the d2x cIOS Installer vX.X folder where X.X is the version number) to <em>sd:/apps</em></li>
+		<ul>
+			<li>You should now have a file called <em>sd:/apps/d2x cIOS Installer vX.X/boot.dol</em> and some other files in the same directory</li>
+		</ul>
+		<li>Insert the SD card into your Wii and start Homebrew Channel then the "D2x cIOS Installer" app</li>
+		<li>Press the A button when prompted at the start screen</li>
+		<li>Choose IOS236 for the IOS to use for the installation with left/right then push A (it should be selected by default)</li>
+		<li>We are now going to install d2xv6 into IOS248 with base 56 using the following steps:</li>
+		<ol>
+			<li>Select the latest version of D2X for cIOS</li>
+			<ul>
+				<li>As of the 2.2 installer, the latest version is v6 and should be selected by default</li>
+			</ul>
+			<li>Select 56 for the cIOS base</li>
+			<li>Select 248 for the cIOS slot</li>
+			<ul>
+				<li>If you have followed this tutorial before, the installer will tell you there is another IOS there. It is safe to overwrite it.</li>
+			</ul>
+			<li>Push A to accept then let the installation complete</li>
+			<li>Press the A button to go back to the menu</li>
+		</ol>
+		<li>We are now going to install d2xv6 into IOS247 with base 57 using the following steps:</li>
+		<ol>
+			<li>Select the latest version of D2X for cIOS</li>
+			<li>Select 57 for the cIOS base</li>
+			<li>Select 247 for the cIOS slot</li>
+			<ul>
+				<li>If you have followed this tutorial before, the installer will tell you there is another IOS there. It is safe to overwrite it.</li>
+			</ul>
+			<li>Push A to accept then let the installation complete</li>
+			<li>Press the B button to exit</li>
+		</ol>
+		<li>You have installed d2x into the 248 and 247 slots and can now move on with other steps in the tutorial.</li>
+      </ol>
+    </div>
+	
+	<div class="section" id="nus">
+      <h5>NUS Downloader for downloading IOSes from Nintendo</h5>
+	  <p>Requirements</p>
+	  <ul>
+		<li>None</li>
+	  </ul>
+	  <br/>
+      <ol>
+        <li>Download the most recent version of NUS Downloader from <a href="http://wiibrew.org/wiki/NUS_Downloader">here</a></li>
+		<li>Unzip NUS Downloader into a directory on your PC</li>
+		<li>Navigate to the directory in Windows Explorer and execute the app by double clicking NUS Downloader.exe</li>
+		<li>
+			<p>Method 1 (easier but may not work for newer IOSes)</p>
+			<ol>
+				<li>Click the Database button and then select IOS…00000001000000ZZ IOSXX…vYYYY from the pull down menu</li>
+				<li>Click the checkbox next to Pack WAD if applicable</li>
+			</ol>
+			<p>Method 2 (should always work)</p>
+			<ol>
+				<li>Put the text 00000001000000ZZ into the first text box which says "Title ID"</li>
+				<li>Put the text YYYY into the second text box which says Version and is after the v</li>
+				<li>If the previous page told you to use the Pack WAD option, then click the checkbox next to Pack WAD</li>
+			</ol>
+		</li>
+		<li>Click <em>Start NUS Download</em></li>
+		<li>The WAD or files you need will be downloaded to the <em>titles/00000001000000ZZ/YYYY/</em> directory</li>
+      </ol>
+    </div>
+	
+	<hr/>
+	
+	
+
+  </div>
+
+  <script src="https://kit.fontawesome.com/2bf4634c2d.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
