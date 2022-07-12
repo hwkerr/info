@@ -6,4 +6,4 @@ Documents with instructions/notes for myself and others.
 
 [Garry's Mod Asset Installation](gmod)
 
-[Wii Modding Guide](docs/ModWii.txt)
+[Wii Modding Guide](wii)
